@@ -20,6 +20,13 @@ func (t trójkąt) pole() (float64, float64) {
 	return t.p, t.o
 }
 
+func (t *trójkąt) pole2() (float64, float64) {
+	t.o = t.a + t.b + t.c
+
+	t.p = math.Sqrt(t.o / 2 * (t.o/2 - t.a) * (t.o/2 - t.b) * (t.o/2 - t.c))
+	return t.p, t.o
+}
+
 type kwadrat struct {
 	a float64
 	o float64
@@ -48,6 +55,7 @@ func main() {
 	}
 
 	pol, obw := T.pole()
-	fmt.Println("Pole trójkąta o bokach:", T.a, T.b, T.c, "wynosi w jednostkach kwadratowych:", pol, "a obwód w jednostkach liniowych:", obw)
+	fmt.Println("Pole trójkąta o bokach:", T.a, T.b, T.c, "wynosi w jednostkach kwadratowych:", T.p, "a obwód w jednostkach liniowych:", T.o)
+	fmt.Println("obw:", obw, "pol:", pol)
 
 }
