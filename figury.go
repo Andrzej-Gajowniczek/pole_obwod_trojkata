@@ -55,7 +55,6 @@ func main() {
 	}
 
 	pol, obw := T.pole()
-	fmt.Println("Pole trójkąta o bokach:", T.a, T.b, T.c, "wynosi w jednostkach kwadratowych:", T.p, "a obwód w jednostkach liniowych:", T.o)
 	fmt.Println("obw:", obw, "pol:", pol)
 	T.pole2()
 	fmt.Println("Pole trójkąta o bokach:", T.a, T.b, T.c, "wynosi w jednostkach kwadratowych:", T.p, "a obwód w jednostkach liniowych:", T.o)
