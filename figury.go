@@ -13,7 +13,7 @@ type trójkąt struct {
 	p float64
 }
 
-func (t trójkąt) pole() (float64, float64) {
+func (t trójkąt) policz() (float64, float64) {
 	t.o = t.a + t.b + t.c
 
 	t.p = math.Sqrt(t.o / 2 * (t.o/2 - t.a) * (t.o/2 - t.b) * (t.o/2 - t.c))
@@ -54,7 +54,7 @@ func main() {
 		c: 2,
 	}
 
-	pol, obw := T.pole()
+	pol, obw := T.policz()
 	fmt.Println("obw:", obw, "pol:", pol)
 	T.pole2()
 	fmt.Println("Pole trójkąta o bokach:", T.a, T.b, T.c, "wynosi w jednostkach kwadratowych:", T.p, "a obwód w jednostkach liniowych:", T.o)
